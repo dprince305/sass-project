@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$theme-orange:#ff6600;
+$theme-gray-200:#151735;
+$theme-gray-100: #4f5168;
+$theme-white:#ffffff;
+
+body{
+    font-family: 'Sofia Sans Semi Condensed';
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+li{
+    list-style: none;
+}
+.d-flex{
+    display: flex;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.relative{
+    position: relative;
+}
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.33%;
+}
+.col-5{
+    width: 41.65%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.31%;
+}
+.col-8{
+    width: 66.64%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.3%;
+}
+.col-11{
+    width: 91.3%;
+}
+.col-12{
+    width: 100%;
+}
+
+.theme-btn {
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 0px 45px;
+    border-radius: 50px;
+    background: $theme-orange;
+    cursor : pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-out 0s;
+
+    &:hover {
+        background: #2371ff;
+        color: $theme-white!important;
+    }
+}
+
+.back-to-top{
+    background-color:$theme-orange;
+    color: white;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+
+/* LOADER */
+
+.overlay{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+
+    .loader {
+        width: 70px;
+        height: 70px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        border-top-color: #FF3D00;
+        animation: rotate 1s infinite linear;
+       
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    } 
+}
+
+
+
+
+
+
+// STICKY HEADER
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: slidedown 0.8s;
+}
+@keyframes slidedown {
+   0%{
+        transform: translateY(-100%);
+   } 
+}
+

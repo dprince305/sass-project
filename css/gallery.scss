@@ -1,0 +1,31 @@
+// GALLERY
+
+.gallery{
+
+    h2{
+        font-size: 55px;
+        text-align: center;
+        margin-bottom: 50px;
+        color: $theme-gray-200;
+        
+        span{
+            color: $theme-orange;
+        }
+    }
+    img{
+        padding-right: 20px;
+    }
+    .slick-dots{
+        li{
+            button{
+                &::before{
+                    margin-top: 30px;
+                    font-size: 50px;
+                    color: transparent;
+                    border: 3px solid #2371ff;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

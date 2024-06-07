@@ -1,0 +1,108 @@
+// VIDEO-AREA
+
+.video-area{
+    padding: 120px 0;
+    text-align: center;
+    background-image: url(../img/video-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        background: rgba(21, 32, 66, 0.9);
+        z-index: -1;
+    }
+    i{
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        background: $theme-orange;
+        display: inline-block;
+        font-size: 25px;
+        color: $theme-white;
+        text-align: center;
+        border-radius: 50%;
+        transform: translate(4px, 4px);
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: 0.4s;
+
+        &:hover{
+            background-color: #2371ff;
+        }
+    }
+
+    
+    .video-btn{
+        position: relative;
+        transition: all 0.3s ease-out 0s;
+        background: $theme-white;
+        padding: 7px;
+        border-radius: 50%;
+        
+        &::after{
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #cccccc;
+            animation-name: popupBtn;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        } 
+        &::before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #cccccc;
+            animation-name: popupBtn;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes popupBtn {
+
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            
+            50% {
+                transform: scale(1.6);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(2.2);
+                opacity: 0;
+            }
+            
+        }
+    }
+    h2{
+        font-size: 55px;
+        color: $theme-white;
+        font-weight: 600;
+        margin-top: 30px;
+
+        span{
+            color: $theme-orange;
+        }
+    }
+}
